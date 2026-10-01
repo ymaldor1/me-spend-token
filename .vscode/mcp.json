@@ -1,0 +1,42 @@
+{
+  "servers": {
+    "powerAutomate": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/.vscode/mcp/launch.mjs", "power-automate"],
+      "env": {
+        "PP_MCP_WORKSPACE": "${workspaceFolder}",
+        "POWERPLATFORM_ENVIRONMENTS": "Default",
+        "POWERPLATFORM_Default_URL": "https://org41ddfd64.crm4.dynamics.com",
+        "POWERPLATFORM_Default_CLIENT_ID": "e5006e80-a91d-45b5-b53b-44f0e66796f0",
+        "POWERPLATFORM_Default_TENANT_ID": "a9bced6a-8391-4381-8150-71283e3fdfd4"
+      },
+      "dev": { "watch": ".vscode/mcp/auth.config.json" }
+    },
+    "power-platform": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/.vscode/mcp/launch.mjs", "power-platform"],
+      "env": {
+        "PP_MCP_WORKSPACE": "${workspaceFolder}",
+        "POWERPLATFORM_ENVIRONMENTS": "Default",
+        "POWERPLATFORM_Default_URL": "https://org41ddfd64.crm4.dynamics.com",
+        "POWERPLATFORM_Default_CLIENT_ID": "e5006e80-a91d-45b5-b53b-44f0e66796f0",
+        "POWERPLATFORM_Default_TENANT_ID": "a9bced6a-8391-4381-8150-71283e3fdfd4"
+      },
+      "dev": { "watch": ".vscode/mcp/auth.config.json" }
+    },
+    "canvas-authoring": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/.vscode/mcp/launch.mjs", "canvas-authoring"],
+      "env": { "PP_MCP_WORKSPACE": "${workspaceFolder}" },
+      "dev": { "watch": ".vscode/mcp/auth.config.json" }
+    },
+    "cli-microsoft365-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@pnp/cli-microsoft365-mcp-server@latest"]
+    }
+  }
+}

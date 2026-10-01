@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "noop",
+			"type": "shell",
+			"command": "echo noop"
+		},
+		{
+			"label": "noop-write-review",
+			"type": "shell",
+			"command": "echo done"
+		},
+		{
+			"label": "Power Platform MCP: Redo auth",
+			"detail": "Delete this workspace's stored MCP credentials, set them up again; the 3 MCP servers restart on save",
+			"type": "process",
+			"command": "pwsh",
+			"args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/.vscode/mcp/auth/Setup-McpAuth.ps1", "-Reset", "-WorkspaceRoot", "${workspaceFolder}"],
+			"presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+			"problemMatcher": []
+		},
+		{
+			"label": "Power Platform MCP: Change auth",
+			"detail": "Re-run the MCP auth setup keeping stored values as defaults; the 3 MCP servers restart on save",
+			"type": "process",
+			"command": "pwsh",
+			"args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/.vscode/mcp/auth/Setup-McpAuth.ps1", "-WorkspaceRoot", "${workspaceFolder}"],
+			"presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+			"problemMatcher": []
+		},
+		{
+			"label": "Power Platform MCP: Test access",
+			"type": "process",
+			"command": "node",
+			"args": ["${workspaceFolder}/.vscode/mcp/launch.mjs", "--test", "all"],
+			"options": { "env": { "PP_MCP_WORKSPACE": "${workspaceFolder}" } },
+			"presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+			"problemMatcher": []
+		}
+	]
+}

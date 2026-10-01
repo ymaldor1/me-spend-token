@@ -1,0 +1,16 @@
+{
+  "name": "power-platform-mcp-pack",
+  "private": true,
+  "type": "module",
+  "description": "Shared launcher + Windows Credential Manager auth for the power-platform, power-automate and canvas-authoring MCP servers.",
+  "scripts": {
+    "setup": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./auth/Setup-McpAuth.ps1",
+    "test": "node ./launch.mjs --test all"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "powerplatform-mcp": "2.5.0"
+  }
+}
