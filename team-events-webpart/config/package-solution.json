@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "team-events-webpart-client-side-solution",
+    "id": "6ccbf29f-b1a2-4229-9401-99994fdf73a3",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "team-events-webpart description"
+      },
+      "longDescription": {
+        "default": "team-events-webpart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "team-events-webpart Feature",
+        "description": "The feature that activates elements of the team-events-webpart solution.",
+        "id": "a64f405b-1c72-46d1-8a92-fe54a5e10679",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/team-events-webpart.sppkg"
+  }
+}

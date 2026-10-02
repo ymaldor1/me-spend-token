@@ -1,0 +1,227 @@
+.teamEvents {
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+
+  --hostColor: "[theme:themePrimary, default: #0078d4]";
+  --attendColor: #8764b8;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.formColumn {
+  flex: 1 1 300px;
+  max-width: 420px;
+}
+
+.calendarColumn {
+  flex: 3 1 560px;
+  min-width: 0;
+}
+
+.card {
+  border: 1px solid #edebe9;
+  border-radius: 6px;
+  padding: 16px;
+  background: "[theme:bodyBackground, default: #ffffff]";
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.13), 0 0.3px 0.9px rgba(0, 0, 0, 0.11);
+}
+
+.cardTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.datePicker {
+  flex: 1 1 160px;
+}
+
+.timePicker {
+  width: 110px;
+}
+
+.calendarToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  .cardTitle {
+    margin: 0;
+  }
+}
+
+.calendarNav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rangeLabel {
+  font-weight: 600;
+  margin: 0 8px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.legendSwatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+
+.calendar {
+  border: 1px solid #edebe9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.calendarHeader {
+  display: flex;
+  border-bottom: 1px solid #edebe9;
+  background: #faf9f8;
+}
+
+.calendarBody {
+  display: flex;
+  height: 520px;
+  overflow-y: auto;
+}
+
+.timeGutter {
+  flex: 0 0 52px;
+}
+
+.hourLabel {
+  box-sizing: border-box;
+  font-size: 11px;
+  color: #605e5c;
+  text-align: right;
+  padding-right: 6px;
+  transform: translateY(-7px);
+}
+
+.dayHeader {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 0;
+  min-width: 0;
+}
+
+.dayName {
+  font-size: 12px;
+  color: #605e5c;
+  text-transform: uppercase;
+}
+
+.dayNumber {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.today .dayNumber {
+  color: var(--hostColor);
+}
+
+.dayColumn {
+  flex: 1 1 0;
+  position: relative;
+  border-left: 1px solid #edebe9;
+  min-width: 0;
+}
+
+.todayColumn {
+  background: rgba(0, 120, 212, 0.04);
+}
+
+.hourSlot {
+  box-sizing: border-box;
+  border-bottom: 1px solid #f3f2f1;
+}
+
+.event {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 2px 4px;
+  border: none;
+  border-left: 3px solid;
+  border-radius: 3px;
+  font: inherit;
+  font-size: 11px;
+  text-align: left;
+  cursor: pointer;
+  color: #201f1e;
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(0.95);
+    z-index: 2;
+    outline: 1px solid #201f1e;
+  }
+}
+
+.eventTitle {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.eventTime {
+  white-space: nowrap;
+  color: #484644;
+}
+
+.hosted {
+  background: #deecf9;
+  border-color: var(--hostColor);
+}
+
+.attending {
+  background: #efe9f7;
+  border-color: var(--attendColor);
+}
+
+.legendSwatch.hosted {
+  background: var(--hostColor);
+}
+
+.legendSwatch.attending {
+  background: var(--attendColor);
+}
+
+.roleBadge {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border-left: 3px solid;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sectionLabel {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
